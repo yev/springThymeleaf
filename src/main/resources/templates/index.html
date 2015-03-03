@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo of Thymeleaf + Spring</title>
+</head>
+<body>
+<h1 th:text="${flashMes}">Test</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th th:text="#{headers.name}">Name</th>
+        <th th:text="#{headers.price}">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="message : ${messages}">
+        <td th:text="${message.name}">Oranges</td>
+    </tr>
+    </tbody>
+</table>
+<p><a th:href="@{/lang?lang=fr}">FR</a><a th:href="@{/lang?lang=en}">EN</a> </p>
+</body>
+</html>
